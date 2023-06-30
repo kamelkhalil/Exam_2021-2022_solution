@@ -1,0 +1,26 @@
+﻿@page
+@model Exam_2021_2022_solution.Pages.ResultModel
+@{
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <h1>Result of the Game</h1>
+            <hr />
+
+            <h2>Dear @Model.resultViewModel.Name</h2>
+
+            @if (Model.resultViewModel.IsWinner)
+            {
+                <h2>Congratulations! You Won!</h2>
+                <h2>Your Score: @Model.resultViewModel.Score</h2>
+            }
+            else
+            {
+                <h2>Sorry, You Lost!</h2>
+                <h2>Your Score: @Model.resultViewModel.Score</h2>
+            }
+        </div>
+    </div>
+</div>

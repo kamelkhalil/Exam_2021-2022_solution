@@ -1,0 +1,51 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <h1 class="text-center">Welcome to Our Game!</h1>
+            <hr />
+
+            <form method="post">
+
+                <div class="form-group">
+                    <label for="fullName">Full Name</label>
+                    <input id="fullName" class="form-control" asp-for="@Model.Game.FullName" />
+                    <span asp-validation-for="@Model.Game.FullName" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputA">A</label>
+                    <input id="inputA" class="form-control" asp-for="@Model.Game.A" />
+                    <span asp-validation-for="@Model.Game.A" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputB">B</label>
+                    <input id="inputB" class="form-control" asp-for="@Model.Game.B" />
+                    <span asp-validation-for="@Model.Game.B" class="text-danger"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="inputC">C</label>
+                    <input id="inputC" class="form-control" asp-for="@Model.Game.C" />
+                    <span asp-validation-for="@Model.Game.C" class="text-danger"></span>
+                </div>
+
+                <div class="text-center">
+                    <button class="btn btn-primary" type="submit">Submit</button>
+                </div>
+
+                <div asp-validation-summary="All" class="text-danger mt-3"></div>
+            </form>
+        </div>
+    </div>
+</div>
+
+@section Scripts{
+    <partial name="_ValidationScriptspartial" />
+}
